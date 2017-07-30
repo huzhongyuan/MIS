@@ -188,7 +188,6 @@ body{
 	margin-bottom: 20px;
 }
 #study{
-	text-indent:2em;
 	height: 250px;
 	background-color: #DFDFDF;
 	padding: 20px 50px 20px 50px;
@@ -197,5 +196,5 @@ body{
 	word-wrap:break-word; 
 	word-break:break-all;
 	overflow: hidden;
-	line-height: 30px;
+	line-height: 40px;
 }

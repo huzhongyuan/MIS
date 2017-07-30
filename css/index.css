@@ -13,6 +13,10 @@
 	position: relative;
 	margin-bottom: 40px;
 }
+/*.child{
+	width: 1000px;
+	height: 326px;
+}*/
 #play img{
 	position: absolute;
 	width: 1000px;
@@ -33,6 +37,9 @@
 	background-color: #367E94;
 	cursor:pointer;
 }
+/*#cricle span:nth-child(1){
+	background-color: white;
+}*/
 #cricle span:hover{
 	background-color: white;
 }

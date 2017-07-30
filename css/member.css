@@ -159,6 +159,7 @@ body{
 .man{
 	height: 200px;
 	overflow: hidden;
+	cursor:pointer;
 }
 .photo{
 	padding-top: 5px;
@@ -273,4 +274,10 @@ body{
 #changepage a:link{
 	color: white;
 }
-*/
+
+#beforepage{
+	cursor: pointer;
+}
+#nextpage{
+	cursor: pointer;
+}
