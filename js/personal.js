@@ -16,12 +16,27 @@ $(function(){
 		    $("#photo img")[0].src="upload/"+json.data.Member.picture.link;
 			$("#name")[0].innerHTML="姓名:"+json.data.Member.name;
 			$("#major")[0].innerHTML="系别："+json.data.Member.xibie;
-			$("#position")[0].innerHTML="学位："+json.data.Member.xuewei;
-			$("#degree")[0].innerHTML="职称："+json.data.Member.zhicheng;
-			$("#phone")[0].innerHTML="办公室电话："+json.data.phoneAndEmail.phone;
+			if (json.data.Member.xuewei==undefined) {
+				$("#position")[0].style.display="none";
+			}
+			else{
+				$("#position")[0].innerHTML="学位："+json.data.Member.xuewei;
+			}
+			if (json.data.Member.zhicheng==undefined) {
+				$("#degree")[0].style.display="none";
+			}
+			else{
+				$("#degree")[0].innerHTML="职称："+json.data.Member.zhicheng;
+			}
+			$("#phone")[0].innerHTML="电话："+json.data.phoneAndEmail.phone;
 			$("#email")[0].innerHTML="邮箱："+json.data.phoneAndEmail.email;
 			$("#personcontent")[0].innerHTML=json.data.Member.jianjie;
-			$("#study")[0].innerHTML=json.data.titleList[0]+'<br>'+json.data.titleList[1]+'<br>'+json.data.titleList[2]+'<br>'+json.data.titleList[3]+'<br>'+json.data.titleList[4];
+			for(var i=0;i<5&&json.data.titleList[i]!=undefined;i++){
+				$("#study")[0].innerHTML=json.data.titleList[i]+'<br>';
+			}
+			if ($("#study")[0].innerHTML=="") {
+				$("#study")[0].innerHTML="这人很懒，什么都没留下。"
+			}
 		},
 		error:function(json){
 			alert("error");
